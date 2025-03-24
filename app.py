@@ -63,7 +63,7 @@ def page():
         st.session_state["messages"] = []
         st.session_state["assistant"] = ChatPDF()
 
-    st.header("RAG with Local DeepSeek R1")
+    st.header("Course Assist - with Local DeepSeek R1")
 
     st.subheader("Upload a Document")
     st.file_uploader(
@@ -78,13 +78,13 @@ def page():
     st.session_state["ingestion_spinner"] = st.empty()
 
     # Retrieval settings
-    st.subheader("Settings")
-    st.session_state["retrieval_k"] = st.slider(
-        "Number of Retrieved Results (k)", min_value=1, max_value=10, value=5
-    )
-    st.session_state["retrieval_threshold"] = st.slider(
-        "Similarity Score Threshold", min_value=0.0, max_value=1.0, value=0.2, step=0.05
-    )
+    # st.subheader("Settings")
+    # st.session_state["retrieval_k"] = st.slider(
+    #     "Number of Retrieved Results (k)", min_value=1, max_value=10, value=5
+    # )
+    # st.session_state["retrieval_threshold"] = st.slider(
+    #     "Similarity Score Threshold", min_value=0.0, max_value=1.0, value=0.2, step=0.05
+    # )
 
     # Display messages and text input
     display_messages()
